@@ -25,11 +25,7 @@ start.s = sd(train[!is.na(train)])
 start.su = sqrt(start.s^2/lu)
 start.sv = sqrt(start.s^2/lv)
 
-ixs = which(!is.na(train), arr.ind =T)
-userIxs = ixs[,1]
-itemIxs = ixs[,2]
-
-jags.data = list(N=N, M=M, D=D, r=train[ixs], userIxs=userIxs, itemIxs=itemIxs, dataSize=length(itemIxs))
+jags.data = list(N=N, M=M, D=D, r=train[ixs], userIxs=userIxs, itemIxs=itemIxs, dataSize=dataSize)
 jags.params = c("u", "v", "s", "su", "sv")
 jags.inits = list(s=start.s, su=start.su, sv=start.sv, 
                   u=matrix( rnorm(N*D,mean=0,sd=start.su), N, D), 
