@@ -13,7 +13,7 @@ for (j in 1:M) {
       preds = rep(0, iterations)
       for (k in 1:iterations) {
         g = ((user_sample(i, k) %*% item_sample(j, k)))
-        #g = 1/(1+exp(-g))
+        g = 1/(1+exp(-g))
         preds[k] = g
       }
       #u = samples$u[i,,,1]

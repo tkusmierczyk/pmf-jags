@@ -23,7 +23,7 @@ option.list = list(
   make_option(c("-w", "--wrapper"), type="character", default="wrappers/R2jags.R", 
               help="selects JAGS wrappers (from wrappers// directory) [default = %default]", 
               metavar="character"), 
-  make_option(c("-e", "--eval"), type="character", default="evaluation/baselines.R,evaluation/mle.R,evaluation/bayesian.R", 
+  make_option(c("-e", "--eval"), type="character", default="evaluation/baselines.R,evaluation/mle.R,evaluation/mle_g.R", 
               help="a list of comma-separated evaluation methods (from evaluation// directory) [default = %default]", 
               metavar="character"), 
   make_option(c("-s", "--save"), type="logical", default=F, action="store_true",
@@ -41,6 +41,12 @@ print("Data loading")
 source(file="io.R")
 files = load.multiple(opt$train, opt$test)
 train = files[[1]]; test = files[[2]]
+
+# sparse representation:
+ixs = which(!is.na(train), arr.ind =T)
+userIxs = ixs[,1]
+itemIxs = ixs[,2]
+dataSize = length(itemIxs)
 
 print(" train data:")
 print.data.report(train)

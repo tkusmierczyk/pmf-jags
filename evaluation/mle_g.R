@@ -5,7 +5,7 @@ for (j in 1:M) {
   for (i in 1:N) {
     if (!is.na(test[i,j])) { #to speed up calculate only for test samples
       g = ((retrieved.u[i,] %*% retrieved.v[j,]))
-      #g = 1/(1+exp(-g))
+      g = 1/(1+exp(-g))
       r2[i,j] <- g
     }
   }
