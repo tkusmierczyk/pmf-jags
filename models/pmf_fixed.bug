@@ -1,0 +1,25 @@
+model{
+  tau  <- 1/(s*s)
+  tauv <- 1/(sv*sv)
+  tauu <- 1/(su*su)
+  
+  for (j in 1:M) {
+    for (d in 1:D) {
+      v[j,d] ~ dnorm(0, tauv) 
+    }
+  }
+  
+  for (i in 1:N) {
+    for (d in 1:D) {
+      u[i,d] ~ dnorm(0, tauu) 
+    }
+  }
+  
+  for (j in 1:M) {
+    for (i in 1:N) {
+      mu[i,j] <- inprod(u[i,], v[j,])     
+      r[i,j] ~ dnorm(mu[i,j], tau)
+    }
+  }
+}
+
