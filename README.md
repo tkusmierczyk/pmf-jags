@@ -152,15 +152,15 @@ Some of the above models were experimentally compared on movielens data. Results
 
 ## Results
 
- | model                     | RMSE  | RMSEb | E(s)  | E(su) | E(sv) |
- |---------------------------|-------|-------|-------|-------|-------|
- | `pmf_hypnorm3.bug`        | 0.947 | 0.943 | 0.187 | 0.482 | 0.789 |
- | `pmf_hypnorm_sparse.bug`  | 0.951 | 0.941 | 0.187 | 0.597 | 0.634 |
- | `pmf_hypnorm2.bug`        | 1.072 | 1.055 | 0.192 | 0.325 | 0.387 |
- | `pmf_hypnorm_sparse2.bug` | 1.006 | 1.038 | 2.515 | 0.971 | 0.941 |
- | `pmf_hypnorm.bug`         | 1.022 | ?     | 2.515 | 0.815 | 1.124 |
- | `pmf_hypnorm.bug` x1      | 1.011 | ?     | 2.514 | 0.381 | 2.418 |
- | `pmf_fixed.bug` x2        | 1.062 | 1.077 | ?     | ?     | ?     |
+model                     | RMSE  | RMSEb | E(s)  | E(su) | E(sv) 
+--------------------------|-------|-------|-------|-------|-------
+`pmf_hypnorm3.bug`        | 0.947 | 0.943 | 0.187 | 0.482 | 0.789 
+`pmf_hypnorm_sparse.bug`  | 0.951 | 0.941 | 0.187 | 0.597 | 0.634 
+`pmf_hypnorm2.bug`        | 1.072 | 1.055 | 0.192 | 0.325 | 0.387 
+`pmf_hypnorm_sparse2.bug` | 1.006 | 1.038 | 2.515 | 0.971 | 0.941 
+`pmf_hypnorm.bug`         | 1.022 | ?     | 2.515 | 0.815 | 1.124 
+`pmf_hypnorm.bug` x1      | 1.011 | ?     | 2.514 | 0.381 | 2.418 
+`pmf_fixed.bug` x2        | 1.062 | 1.077 | ?     | ?     | ?     
  
 - RMSEb - bayesian
 - x1 (`rjags.R` instead of `R2jags.R`)
