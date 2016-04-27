@@ -2,7 +2,7 @@
 library(rjags)
 print("rjags")
 
-model = jags.model(model.file, jags.data, n.chains=n.chains, n.adapt=n.burnin)
+model = jags.model(model.file, jags.data, n.chains=n.chains, n.adapt=n.burnin) #n.adapt SEEM TO NOT WORK!
 update(model)
 samples = jags.samples(model, jags.params, n.iter=n.iter, thin=n.thin)
 
