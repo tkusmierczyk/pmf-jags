@@ -1,9 +1,4 @@
-# pmf-jags: Probabilistic Matrix Factorization with JAGS in R
-====================
-
-The project is devoted to provide an educational framework for Probabilistic Matrix Factorization with JAGS in R. The original idea is taken from: `Mnih, Andriy, and Ruslan Salakhutdinov. "Probabilistic matrix factorization." In Advances in neural information processing systems, pp. 1257-1264. 2007.`. The current version contains several variations of the original models, several encapsulated wrappers for JAGS and a few evaluation methods.
-
-
+Educational framework for Probabilistic Matrix Factorization with JAGS in R. The original idea is taken from: `Mnih, Andriy, and Ruslan Salakhutdinov. "Probabilistic matrix factorization." In Advances in neural information processing systems, pp. 1257-1264. 2007.`. The current version contains several variations of the original models, several encapsulated wrappers for JAGS and few evaluation methods.
 
 # Content
 * `models` - various BUGS/JAGS models  
